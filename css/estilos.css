@@ -57,7 +57,7 @@ header,footer{
 /*estilos del header*/
 
 .header{
-    height: 15vh;
+    height: 4em;
     position:sticky;
     top:0; 
     z-index: 10; 
@@ -76,7 +76,7 @@ header,footer{
             display:flex;
             column-gap: 20px;
             a{
-                font-size:1.4rem;
+                font-size:1.1rem;
             }
            
         }
@@ -121,10 +121,7 @@ estilos seccion principal
             margin-top: 20px;
             display: inline-block;
             text-decoration: none;
-            color:var(--main-color);
-            font-size: 2rem;
             border:2px solid var(--main-color);
-            border-radius: 5px;
             padding:10px 20px;
         }
     }
@@ -136,12 +133,41 @@ estilos seccion principal
         .contenedorTitulos{
             width: 90%;
             backdrop-filter:initial;
-            a{/*boton de registrarse de la seccion de arriba*/
-                font-size: 1.5rem;
-            }
+            
         }
     }
   
+}
+
+/*buscador*/
+.searchMovies{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+/*estilos generales*/
+.btn-primary{
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    border: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--third-color-t);
+    }
+}
+
+.input-search{
+    width: 27rem;
+    font-size: 1.5em;
+    padding: 0.5rem;
+    border-radius: 1.5em;
+
 }
 .peliculasTendencias{
     width: 80%;
@@ -204,8 +230,33 @@ estilos seccion principal
         }
     }
 }
-
-
+footer{
+    background-color:#9f3647;
+    color:#ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .listaNav{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        .listaItem{
+            margin-left:20px;
+            .linkNav{
+                text-decoration: none;
+                color:#ffffff;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+            .administradorPeliculas{
+                background-color: #181419;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
 
 /*
 @media screen and (max-width: 800px) {
