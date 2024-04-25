@@ -261,10 +261,23 @@ footer{
         list-style: none;
         display: flex;
         column-gap: 20px;
-
     }
     a {
         text-decoration: none;
         color: #ffffff;
     }
+    /*irArriba*/
+    .irArriba{
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &:hover{
+            background-color: #
+    }
+
 }
