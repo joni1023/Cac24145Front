@@ -27,6 +27,17 @@ body{
     border-radius: 10px;
     
 }
+.bodyForms{
+    height: 100vh;
+    background-image: url("../assets/img/background.jpg");
+    background-size: cover;
+    a:first-child{
+        display: inline-block;
+        text-decoration:none;
+        font-size: 1.6rem;
+        margin: 20px;
+    }
+}
 /*generalidades*/
 h1{
     font-size: 4rem;
@@ -263,12 +274,21 @@ a {
 }
 /*seccion de registrarse.html*/
 .main{
-    height: 100vh;
     display: flex;
+}
+input:auto-fill { 
+    outline: 5px solid #022859;
+  }
+  input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    color: fieldtext !important;
 }
 .seccionRegistrarse
 {
-    background-color:rgb(42, 42, 42);
+    background-color:#022859;
+    opacity: 0.8;
     width: 40%;
     border-radius: 10px;
     padding: 20px 20px;
