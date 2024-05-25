@@ -48,7 +48,7 @@ h2{
 h1,h2{
     font-weight: --font-weight-bold;
     margin-bottom: 20px;
-}
+} 
 /*media querys para dispositivos hasta 800px para el h1 y h2*/
 @media screen and (max-width: 800px) {
     h1{
@@ -276,20 +276,11 @@ a {
 .main{
     display: flex;
 }
-input:auto-fill { 
-    outline: 5px solid #022859;
-  }
-  input:-internal-autofill-selected {
-    appearance: menulist-button;
-    background-image: none !important;
-    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
-    color: fieldtext !important;
-}
 .seccionRegistrarse
 {
-    background-color:#022859;
-    opacity: 0.8;
-    width: 40%;
+    background-color:hsl(0, 4%, 26%);
+    opacity: 0.9;
+    width: 30%;
     border-radius: 10px;
     padding: 20px 20px;
     margin: auto;
@@ -298,11 +289,21 @@ input:auto-fill {
     justify-content: center;
     align-items: center;
     font-size:1.2rem;
-    .tituloRegistrarse
-    {
-        font-size: 1.7rem;
-        font-weight: 700;
+    box-shadow: 10px 10px 26px 4px rgba(0,0,0,0.4);;
+    
+    h2{
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    a{
+        display: block;
+        text-align: center;
         margin-bottom: 20px;
+        font-size: 1rem;
+        color: antiquewhite;
+    }
+    a:hover{
+        color: #2f2dd1;
     }
     /*seleccionar todos los input menos el checkbox*/
     form{
@@ -320,6 +321,7 @@ input:auto-fill {
             outline: none;
             color:rgb(255, 255, 255);
         }
+        
         .error input:not(.check,.boton),.error select{
             border: 1px solid #ff0000;
         }
@@ -339,17 +341,16 @@ input:auto-fill {
                 margin-left: 10px;
             }
         }
-        .button{
+        button{
            width: 100%;
-        }
-        .ayuda{
-            margin-top:40px;
-            font-size: 1rem;
-            text-decoration: none;
-            color: #787878;
-            font-weight:400;
-           
+           margin-bottom: 10px;
         }
     }
    
 }
+select{
+    option:first {
+        color: #500a0a;
+    }
+}
+
