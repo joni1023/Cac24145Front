@@ -18,19 +18,19 @@
     <main id="main" class="main">
         <section class="seccionRegistrarse" >
             <!--pongo get ya que en github pages da error el method post-->
-            <form action="" method="get">
-            <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
-            <a href="../index.html">Volver al inicio</a>
+            <form id="formulario" onsubmit="return validation()">
+                <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
+                <a href="../index.html">Volver al inicio</a>
                 <div>
-                    <input type="email" placeholder="Email" id="email" name="email">
-                    <div class="error-text"></div>
+                    <input type="text" placeholder="Email" id="email" name="email">
+                    <span id="errorEmail" class="error-text"></span>
                 </div>
                 <div>
-                    <input type="password" placeholder="Contraseña" id="password" name="password">
-                    <div class="error-text"></div>
+                    <input type="password" placeholder="Contraseña" id="password" name="password" >
+                    <span id="errorPass" class="error-text"></span>
                 </div>
                 <div>
-                    <button class="btn-primary" type="submit">Iniciar Sesion</button> 
+                    <button class="btn-primary" type="submit">Ingresar</button> 
                 </div>
                 
                 <a href="registrarse.html">¿No tienes cuenta? Registrate</a>
@@ -38,6 +38,6 @@
             </form>
         </section>
     </main>
-   
+   <script src="../js/validaciones.js"></script>
 </body>
 </html>
