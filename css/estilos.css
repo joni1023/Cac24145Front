@@ -7,7 +7,7 @@
 }
 /*configuracion de variables*/
 :root{
-    --main-color: #f3f3f3;
+    --main-color: #F4EEEE;
     --secondary-color: #161516;
     --third-color: #2f2dd1;
     --third-color-t: #4565f7d2;
@@ -48,7 +48,7 @@ h2{
 h1,h2{
     font-weight: --font-weight-bold;
     margin-bottom: 20px;
-}
+} 
 /*media querys para dispositivos hasta 800px para el h1 y h2*/
 @media screen and (max-width: 800px) {
     h1{
@@ -276,20 +276,10 @@ a {
 .main{
     display: flex;
 }
-input:auto-fill { 
-    outline: 5px solid #022859;
-  }
-  input:-internal-autofill-selected {
-    appearance: menulist-button;
-    background-image: none !important;
-    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
-    color: fieldtext !important;
-}
 .seccionRegistrarse
 {
-    background-color:#022859;
-    opacity: 0.8;
-    width: 40%;
+    background-color: var(--main-color);
+    width: 30%;
     border-radius: 10px;
     padding: 20px 20px;
     margin: auto;
@@ -298,58 +288,57 @@ input:auto-fill {
     justify-content: center;
     align-items: center;
     font-size:1.2rem;
-    .tituloRegistrarse
-    {
-        font-size: 1.7rem;
-        font-weight: 700;
-        margin-bottom: 20px;
+    color: #161516;
+    box-shadow: 10px 10px 26px 4px rgba(0,0,0,0.4);;
+    
+    h2{
+        text-align: center;
+        margin-bottom: 0px;
     }
-    /*seleccionar todos los input menos el checkbox*/
+    a{
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: #161516;
+    }
+    a:hover{
+        color: #2f2dd1;
+        font-weight: bold;
+    }
+    
     form{
         width: 100%;
         padding:40px;
-        input:not(.check,.boton),select{
+        div{
+            margin-bottom: 20px;
+        }
+        input{
             width: 100%;
-            margin-bottom: 10px;
             height: 40px;
             padding: 0px 20px;
             font-size: 1.2rem;
             border-radius: 20px;
             border: 2px solid var(--third-color);
-            background-color: #333333;
-            outline: none;
-            color:rgb(255, 255, 255);
-        }
-        .error input:not(.check,.boton),.error select{
-            border: 1px solid #ff0000;
+            background-color:var(--main-color);
+            color:#161516;
         }
         .error-text{
-            color: #ff0000;
             font-size: 0.8rem;
             margin-top:0px;
-            margin-bottom: 10px;
-        }
-      
-        .terminos{
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
             margin-bottom: 20px;
-            .textoCheck{
-                margin-left: 10px;
-            }
+            font-weight: 900; 
         }
-        .button{
+        .input-error{
+            border: 3px solid red;
+        }
+        button{
            width: 100%;
+           margin-bottom: 10px;
         }
-        .ayuda{
-            margin-top:40px;
-            font-size: 1rem;
-            text-decoration: none;
-            color: #787878;
-            font-weight:400;
-           
-        }
+
+        
     }
    
 }
+
