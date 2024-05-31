@@ -17,24 +17,24 @@
     </a>
     <main id="main" class="main">
         <section class="seccionRegistrarse">
-            <form action="" method="get">
+            <form id="formulario" onsubmit="return validation()">
                 <h2 class="tituloRegistrarse">Crear un cuenta</h2>
                 <a href="../index.html">Volver al inicio</a>
                 <div>
                     <input type="text" placeholder="Nombre"  id="nombre" name="nombre">
-                    <div class="error-text"></div>
+                    <span id="errorNombre" class="error-text"></span>
                 </div>
                 <div>
-                    <input type="email" placeholder="Email"  id="email" name="email" >
-                    <div class="error-text"></div>
+                    <input type="text" placeholder="Email"  id="email" name="email" >
+                    <span id="errorEmail" class="error-text"></span>
                 </div>
                 <div>
                     <input type="password" placeholder="Contraseña"  id="password" name="password" >
-                    <div class="error-text"></div>
+                    <span id="errorPass" class="error-text"></span>
                 </div>
                 <div>
                     <input type="password" placeholder="Repetir Contraseña"  id="repassword" name="password">
-                    <div class="error-text"></div>
+                    <span id="errorPass" class="error-text"></span>
                 </div>
                 <div>
                     <button class="btn-primary" type="submit" >Aceptar</button>
@@ -43,6 +43,6 @@
             </form>
         </section>
     </main>
-   
+    <script src="../js/validaciones.js"></script>
 </body>
 </html>

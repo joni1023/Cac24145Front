@@ -11,7 +11,7 @@ function validation() {
 
     // Validar password
     if (password.trim() === "") {
-        document.getElementById("errorPass").textContent = "El nombre es obligatorio.";
+        document.getElementById("errorPass").textContent = "El ingreso de contraseña es obligatorio.";
         document.getElementById("password").classList.add("input-error");
         hayErrores = true;
     }
@@ -25,6 +25,13 @@ function validation() {
     } else if (!emailRegex.test(email)) {
         document.getElementById("errorEmail").textContent = "El correo electrónico no es válido.";
         document.getElementById("email").classList.add("input-error");
+        hayErrores = true;
+    }
+
+    // Validar nombre
+    if (document.getElementById("nombre").value.trim() === "") {
+        document.getElementById("errorNombre").textContent = "El ingreso de nombre es obligatorio.";
+        document.getElementById("nombre").classList.add("input-error");
         hayErrores = true;
     }
 
