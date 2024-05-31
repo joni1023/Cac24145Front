@@ -2,10 +2,12 @@ function validation() {
     // Limpiar mensajes de error
     document.getElementById("errorPass").textContent = "";
     document.getElementById("errorEmail").textContent = "";
+    document.getElementById("errorNombre").textContent = "";
     
     // Obtener valores de los campos
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
+    const nombre = document.getElementById("nombre").value;
     
     let hayErrores = false;
 
@@ -29,7 +31,7 @@ function validation() {
     }
 
     // Validar nombre
-    if (document.getElementById("nombre").value.trim() === "") {
+    if (nombre.trim() === "") {
         document.getElementById("errorNombre").textContent = "El ingreso de nombre es obligatorio.";
         document.getElementById("nombre").classList.add("input-error");
         hayErrores = true;
