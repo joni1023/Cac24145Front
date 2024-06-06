@@ -50,7 +50,7 @@ h1,h2{
     margin-bottom: 20px;
 } 
 /*media querys para dispositivos hasta 800px para el h1 y h2*/
-@media screen and (max-width: 800px) {
+@media (max-width: 768px) {
     h1{
         font-size: 2.2rem;
     }
@@ -65,8 +65,8 @@ header,footer{
     color: var(--main-color);
     padding: 20px;
 }
-/*estilos del header*/
 
+/*estilos del header*/
 .header{
     height: 4em;
     position:sticky;
@@ -95,20 +95,36 @@ header,footer{
         }
     }
 }
-@media screen and (max-width: 800px) {
-   .header{
-      height:initial;
-      nav{
-        flex-direction: column;
-        row-gap: 20px;
-        ul{
-            flex-direction: column;
-            row-gap: 10px;
-        }
-      }
 
-   }
-    
+/* estilos para header en mobile Y tablet */
+@media (max-width: 768px) {
+    .header{
+        height: initial;
+        .navegacion{
+            margin-left:10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+            .anclaLogo{
+                font-size: 1.2rem;
+                font-weight:700;
+            }
+            .listaNav{
+               
+                padding:initial;
+                .listaItem{
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                        
+                    }
+                  
+                }
+            }
+        }
+    }
 }
 /*main
 estilos seccion principal
@@ -342,3 +358,157 @@ a {
    
 }
 
+/* estilos pagina de detalles */
+.mainDetalle{
+    
+    .detalle{
+        padding-top:50px;
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/mario-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        .contenedorDetalle{
+            width:75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+            img{
+              border-radius: 20px;
+            }
+            .textoDetalle{
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+                h2{
+                    margin-top:20px;
+                }
+                .contenedorCreditos{
+                    margin-top:20px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+        }
+        
+        
+       
+    }
+    .trailer{
+        padding-top:150px;
+        padding-bottom: 100px;
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+        .contenedorInfo{
+            .redes{
+                margin-bottom: 20px;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                        }
+                    }
+                  
+                }
+            }
+            .info{
+                table{
+                    width: 100%;
+                    tr{
+                        td{
+                            font-size: 1.2rem;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* estilos mobile y tablet para pagina de detalles */
+@media screen and (max-width:1200px){
+    .mainDetalle{
+        .detalle{
+            height: initial;
+            .contenedorDetalle{
+                flex-direction: column;
+                row-gap: 20px;
+                img{
+                    width: 100%;
+                    height: 300px;
+                }
+                .textoDetalle{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                    h2{
+                        font-size: 1rem;
+                    }
+                    .contenedorCreditos{
+                        flex-direction: column;
+                        row-gap: 10px;
+                    }
+                }
+            }
+        }
+        .trailer{
+            width:95%;
+            padding-top:50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            row-gap: 20px;
+            .contenedorTrailer{
+                width: 100%;
+                h2{
+                    margin-bottom: 20px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 300px;
+                
+                }
+            }
+            .contenedorInfo{
+                width: 100%;
+                .redes{
+                    width: 100% ;
+                    ul{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                       
+                        li{
+                            a{
+                                font-size: 2rem;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+                .info{
+                    table{
+                        tr{
+                            td{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
