@@ -1,4 +1,4 @@
-/*reseteo de valores*/
+
 *{
     margin: 0;
     padding: 0;
@@ -165,7 +165,11 @@ estilos seccion principal
             
         }
     }
-  
+    .group_input{
+        display: flex;
+        flex-direction: column;
+        background-color: #2f2dd1;
+    }
 }
 
 /*buscador*/
@@ -511,4 +515,88 @@ a {
             }
         }
     }
+}
+/*estilos de el crud*/
+#id {
+    visibility: hidden;
+    display: none;
+}
+
+.col{
+    flex-direction: column;
+    align-items: center;
+    margin: 70px;
+}
+
+.form_crud{
+    color: #161516;
+    background-color: var(--main-color);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 40px;
+    form{
+        text-align: center;
+        width: 100%;
+    }
+}
+.group_input{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    align-items: flex-start;
+    label{
+        color: #161516;
+    }
+    
+    input:not([type='file']){
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid var(--third-color);
+        font-size: 1.2em;
+    }
+}
+.sectionFormularioTabla{
+    width: 90%;
+    margin-top: 30px;
+    
+    border-radius: 40px;
+    padding: 20px;
+    h2{
+        font-size: 2em;
+        text-align: center;
+    }
+}
+.table{
+    width: 100%;
+    font-size: 1.2em;
+    thead{
+        background-color: #2f2dd1;
+        padding: 5px;
+        height: 30px;
+    }
+    tr{
+        padding: 10px;
+    }
+
+}
+.btn{
+    padding: 5px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    color: #F4EEEE;
+}
+.btn-danger{
+    background-color: red;
+}
+.btn-success{
+    background-color: #2f2dd1;
 }
